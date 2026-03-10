@@ -98,7 +98,7 @@
                 <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-indigo-600 border-4 border-white"></div>
                 <span class="text-sm font-bold text-indigo-600 uppercase">2025 - Présent</span>
                 <h3 class="text-xl font-bold mt-1 text-gray-900">BUT Génie Mécanique et Productique</h3>
-                <p class="text-lg text-gray-600 font-medium italic">MFJA Montaudran - Toulouse</p
+                <p class="text-lg text-gray-600 font-medium italic">MFJA Montaudran - Toulouse</p>
             </div>
             <div class="relative pl-8">
                 <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-gray-300 border-4 border-white"></div>
@@ -113,7 +113,6 @@
     <section id="competences" class="py-24 bg-indigo-50/50">
         <div class="max-w-6xl mx-auto px-4 text-center mb-16">
             <h2 class="text-4xl font-black text-gray-900 mb-4 uppercase">Compétences & Auto-évaluation</h2>
-            <p class="text-gray-500 text-lg">Réflexion sur mes acquis en ingénierie mécanique</p>
         </div>
         
         <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
@@ -141,43 +140,79 @@
     <section id="projets" class="py-24 max-w-6xl mx-auto px-4">
         <h2 class="text-4xl font-black mb-16 text-center text-gray-900 uppercase">Traces & Réalisations</h2>
         <div class="grid md:grid-cols-2 gap-10">
-            <!-- Projet 1 -->
-            <div class="group bg-indigo-900 rounded-[2.5rem] overflow-hidden shadow-2xl relative">
-                <div class="p-10 text-white h-full flex flex-col justify-between">
+            <!-- Projet 1 : Peugeot 103 (Bleu Indigo) -->
+            <div class="group bg-indigo-900 rounded-[2.5rem] overflow-hidden shadow-2xl relative border border-white/10">
+                <div class="p-10 text-white h-full flex flex-col justify-between relative z-10">
                     <div>
-                        <span class="text-indigo-300 font-bold uppercase text-xs tracking-widest">Mécanique & Passion</span>
-                        <h3 class="text-3xl font-black mt-4 mb-4 leading-tight">Rénovation complète : Peugeot 103</h3>
-                        <p class="text-indigo-100/70 mb-8 leading-relaxed">Remise à neuf mécanique, cycle et esthétique. De l'état d'épave à une machine de collection optimisée.</p>
+                        <span class="text-indigo-300 font-bold uppercase text-xs tracking-widest">Personel</span>
+                        <h3 class="text-3xl font-black mt-4 mb-4 leading-tight">Rénovation : Peugeot 103</h3>
+                        <p class="text-indigo-100/70 mb-8 leading-relaxed">Remise à neuf mécanique, cycle et esthétique.</p>
                     </div>
                     <div>
-                        <button onclick="openModal()" class="bg-white text-indigo-900 px-8 py-3 rounded-xl font-bold hover:scale-105 transition active:scale-95 shadow-lg">Consulter le dossier</button>
+                        <button onclick="openModal('projectModal1')" class="bg-white text-indigo-900 px-8 py-3 rounded-xl font-bold hover:scale-105 transition active:scale-95 shadow-lg">Consulter le dossier</button>
                     </div>
                 </div>
-                <div class="absolute -bottom-12 -right-12 w-48 h-48 bg-indigo-500/20 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-12 -right-12 w-48 h-48 bg-indigo-500/30 rounded-full blur-3xl"></div>
             </div>
             
-            <!-- Projet 2 -->
-            <div class="border-4 border-dashed border-gray-200 rounded-[2.5rem] flex items-center justify-center p-12 text-center bg-white">
-                <div>
-                    <h3 class="text-xl font-bold text-gray-400">Projets du 2nd Semestre</h3>
-                    <p class="text-gray-400 mt-2">Dossier de conception CAO en cours...</p>
+            <!-- Projet 2 (Bleu Roi) -->
+            <div class="group bg-blue-900 rounded-[2.5rem] overflow-hidden shadow-2xl relative border border-white/10">
+                <div class="p-10 text-white h-full flex flex-col justify-between relative z-10">
+                    <div>
+                        <span class="text-blue-300 font-bold uppercase text-xs tracking-widest">Bureau d'études</span>
+                        <h3 class="text-3xl font-black mt-4 mb-4 leading-tight">Projet de Rénovation n°2</h3>
+                        <p class="text-blue-100/70 mb-8 leading-relaxed">Description du projet à venir. Détails sur les interventions mécaniques et les solutions techniques apportées.</p>
+                    </div>
+                    <div>
+                        <button onclick="openModal('projectModal2')" class="bg-white text-blue-900 px-8 py-3 rounded-xl font-bold hover:scale-105 transition active:scale-95 shadow-lg">Consulter le dossier</button>
+                    </div>
                 </div>
+                <div class="absolute -bottom-12 -right-12 w-48 h-48 bg-blue-500/30 rounded-full blur-3xl"></div>
+            </div>
+
+            <!-- Projet 3 (Bleu Azur / Sky) -->
+            <div class="group bg-sky-900 rounded-[2.5rem] overflow-hidden shadow-2xl relative border border-white/10">
+                <div class="p-10 text-white h-full flex flex-col justify-between relative z-10">
+                    <div>
+                        <span class="text-sky-300 font-bold uppercase text-xs tracking-widest">Usinage & Fabrication</span>
+                        <h3 class="text-3xl font-black mt-4 mb-4 leading-tight">Projet de Rénovation n°3</h3>
+                        <p class="text-sky-100/70 mb-8 leading-relaxed">Description du projet à venir. Détails sur les interventions mécaniques et les solutions techniques apportées.</p>
+                    </div>
+                    <div>
+                        <button onclick="openModal('projectModal3')" class="bg-white text-sky-900 px-8 py-3 rounded-xl font-bold hover:scale-105 transition active:scale-95 shadow-lg">Consulter le dossier</button>
+                    </div>
+                </div>
+                <div class="absolute -bottom-12 -right-12 w-48 h-48 bg-sky-500/30 rounded-full blur-3xl"></div>
+            </div>
+
+            <!-- Projet 4 (Bleu Slate / Ardoise) -->
+            <div class="group bg-slate-900 rounded-[2.5rem] overflow-hidden shadow-2xl relative border border-white/10">
+                <div class="p-10 text-white h-full flex flex-col justify-between relative z-10">
+                    <div>
+                        <span class="text-slate-300 font-bold uppercase text-xs tracking-widest">Organisation Industrielle</span>
+                        <h3 class="text-3xl font-black mt-4 mb-4 leading-tight">Projet de Rénovation n°4</h3>
+                        <p class="text-slate-100/70 mb-8 leading-relaxed">Description du projet à venir. Détails sur les interventions mécaniques et les solutions techniques apportées.</p>
+                    </div>
+                    <div>
+                        <button onclick="openModal('projectModal4')" class="bg-white text-slate-900 px-8 py-3 rounded-xl font-bold hover:scale-105 transition active:scale-95 shadow-lg">Consulter le dossier</button>
+                    </div>
+                </div>
+                <div class="absolute -bottom-12 -right-12 w-48 h-48 bg-slate-500/30 rounded-full blur-3xl"></div>
             </div>
         </div>
     </section>
 
-    <!-- Modal : Dossier Rénovation -->
-    <div id="projectModal" class="modal">
+    <!-- Modal 1 : Peugeot 103 -->
+    <div id="projectModal1" class="modal">
         <div class="modal-content">
             <div class="sticky top-0 bg-white p-6 border-b flex justify-between items-center z-10">
                 <h3 class="text-2xl font-black text-indigo-900 uppercase">Projet : Rénovation Peugeot 103</h3>
-                <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 transition">
+                <button onclick="closeModal('projectModal1')" class="text-gray-400 hover:text-gray-600 transition">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                 </button>
             </div>
             
             <div class="p-8 space-y-10 text-gray-700">
-                <!-- Galerie de photos AVANT / APRÈS -->
                 <section>
                     <h4 class="text-lg font-bold text-indigo-600 mb-6 uppercase tracking-wider text-center">Transformation (Avant / Après)</h4>
                     <div class="img-comparison">
@@ -185,20 +220,20 @@
                             <div class="rounded-xl overflow-hidden bg-gray-100 shadow-md border border-gray-200">
                                 <img src="IMG_2762.jpg" alt="Peugeot 103 avant rénovation" class="w-full h-auto object-cover">
                             </div>
-                            <p class="text-center text-sm font-bold text-gray-400 uppercase tracking-tighter">État initial : Base incomplète</p>
+                            <p class="text-center text-sm font-bold text-gray-400 uppercase tracking-tighter">État initial</p>
                         </div>
                         <div class="space-y-2">
                             <div class="rounded-xl overflow-hidden bg-gray-100 shadow-md border border-indigo-200">
                                 <img src="IMG_5340.jpg" alt="Peugeot 103 après rénovation" class="w-full h-auto object-cover">
                             </div>
-                            <p class="text-center text-sm font-bold text-indigo-600 uppercase tracking-tighter">Rendu final : Restauration complète</p>
+                            <p class="text-center text-sm font-bold text-indigo-600 uppercase tracking-tighter">Rendu final</p>
                         </div>
                     </div>
                 </section>
 
                 <section>
                     <h4 class="text-lg font-bold text-indigo-600 mb-3 uppercase tracking-wider">Descriptif Technique</h4>
-                    <p class="leading-relaxed">Ce projet a consisté à récupérer une base dégradée pour en faire une machine performante et fiable. J'ai géré l'intégralité de la chaîne de restauration, de la recherche des pièces manquantes aux réglages de précision.</p>
+                    <p class="leading-relaxed">Ce projet a consisté à récupérer le cadre d'un 103vs de 1976 pour le retaper intégralement.</p>
                 </section>
 
                 <div class="grid md:grid-cols-2 gap-6">
@@ -209,7 +244,7 @@
                         </h5>
                         <ul class="list-disc list-inside text-sm space-y-2">
                             <li>Remontage complet du bloc moteur</li>
-                            <li>Installation échappement </li>
+                            <li>Changement d'échappement</li>
                             <li>Réglage allumage et carburation</li>
                             <li>Optimisation des flux d'admission</li>
                         </ul>
@@ -220,21 +255,24 @@
                             Cycle & Esthétique
                         </h5>
                         <ul class="list-disc list-inside text-sm space-y-2">
-                            <li>Peinture complète (cadre, jantes, fourche)</li>
+                            <li>Peinture complète (cadre, fourche)</li>
                             <li>Montage amortisseurs arrières renforcés</li>
-                            <li>Éclairage</li>
+                            <li>Barre de renfort chromée</li>
                         </ul>
                     </div>
                 </div>
 
-               
-                
                 <div class="flex justify-center pb-6">
-                    <button onclick="closeModal()" class="text-sm font-bold text-gray-400 hover:text-indigo-600 transition uppercase tracking-widest underline decoration-2 underline-offset-4">Fermer le dossier</button>
+                    <button onclick="closeModal('projectModal1')" class="text-sm font-bold text-gray-400 hover:text-indigo-600 transition uppercase tracking-widest underline decoration-2 underline-offset-4">Fermer le dossier</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Modales génériques pour les nouveaux projets -->
+    <div id="projectModal2" class="modal"><div class="modal-content"><div class="p-8 text-center"><h3 class="text-2xl font-bold mb-4 text-blue-900 uppercase">Dossier Projet n°2</h3><p>Contenu technique en cours de préparation...</p><button onclick="closeModal('projectModal2')" class="mt-6 text-blue-600 font-bold">Fermer</button></div></div></div>
+    <div id="projectModal3" class="modal"><div class="modal-content"><div class="p-8 text-center"><h3 class="text-2xl font-bold mb-4 text-sky-900 uppercase">Dossier Projet n°3</h3><p>Contenu technique en cours de préparation...</p><button onclick="closeModal('projectModal3')" class="mt-6 text-sky-600 font-bold">Fermer</button></div></div></div>
+    <div id="projectModal4" class="modal"><div class="modal-content"><div class="p-8 text-center"><h3 class="text-2xl font-bold mb-4 text-slate-900 uppercase">Dossier Projet n°4</h3><p>Contenu technique en cours de préparation...</p><button onclick="closeModal('projectModal4')" class="mt-6 text-slate-600 font-bold">Fermer</button></div></div></div>
 
     <!-- Footer -->
     <footer id="contact" class="bg-indigo-950 text-white pt-24 pb-12">
@@ -249,20 +287,20 @@
     </footer>
 
     <script>
-        function openModal() {
-            document.getElementById("projectModal").style.display = "block";
+        function openModal(id) {
+            document.getElementById(id).style.display = "block";
             document.body.style.overflow = "hidden";
         }
 
-        function closeModal() {
-            document.getElementById("projectModal").style.display = "none";
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
             document.body.style.overflow = "auto";
         }
 
         window.onclick = function(event) {
-            let modal = document.getElementById("projectModal");
-            if (event.target == modal) {
-                closeModal();
+            if (event.target.className === "modal") {
+                event.target.style.display = "none";
+                document.body.style.overflow = "auto";
             }
         }
     </script>
