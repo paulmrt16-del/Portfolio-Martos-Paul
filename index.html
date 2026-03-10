@@ -26,26 +26,26 @@
         }
         .modal-content {
             background-color: #fefefe;
-            margin: 2% auto;
+            margin: 1.5% auto;
             padding: 0;
             border-radius: 1.5rem;
             width: 95%;
-            max-width: 1000px; /* Espace augmenté */
-            max-height: 90vh;
+            max-width: 1100px; /* Augmenté de 900px à 1100px pour plus de place */
+            max-height: 95vh;
             overflow-y: auto;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
         .img-comparison {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
+            gap: 1.5rem; /* Espace augmenté entre les photos */
         }
         /* Fallback si l'image ne charge pas */
         img {
             background-color: #e5e7eb;
             min-height: 50px;
         }
-        @media (max-width: 640px) {
+        @media (max-width: 768px) {
             .img-comparison { grid-template-columns: 1fr; }
         }
     </style>
@@ -217,66 +217,85 @@
                 </button>
             </div>
             
-            <div class="p-8 space-y-10 text-gray-700">
+            <div class="p-8 space-y-12 text-gray-700">
+                <!-- Section Photos Agrandies -->
                 <section>
-                    <h4 class="text-lg font-bold text-indigo-600 mb-6 uppercase tracking-wider text-center">Transformation (Avant / Après)</h4>
+                    <h4 class="text-sm font-bold text-indigo-500 mb-8 uppercase tracking-[0.2em] text-center">Documentation visuelle (Avant / Après)</h4>
                     <div class="img-comparison">
-                        <!-- ESPACE PHOTO AGRANDI PAR L'ASPECT RATIO -->
-                        <div class="space-y-2 text-center">
-                            <div class="rounded-xl overflow-hidden bg-gray-100 shadow-md border border-gray-200 aspect-[4/3] flex items-center justify-center">
-                                <img src="avant.PNG" alt="Avant" onerror="this.src='https://via.placeholder.com/600x475?text=IMG_2762.jpg+manquant'" class="w-full h-full object-cover">
+                        <div class="space-y-4">
+                            <div class="rounded-2xl overflow-hidden bg-gray-100 shadow-lg border border-gray-200 aspect-[4/3] md:aspect-[16/10] flex items-center justify-center">
+                                <img src="avant.PNG" alt="Peugeot 103 avant rénovation" onerror="this.src='https://via.placeholder.com/600x500?text=Image+Avant+Manquante'" class="w-full h-full object-cover">
                             </div>
-                            <p class="text-sm font-bold text-gray-400 uppercase tracking-tighter pt-2">État initial</p>
+                            <div class="flex items-center gap-3 px-2">
+                                <span class="h-2 w-2 rounded-full bg-gray-400"></span>
+                                <p class="text-xs font-bold text-gray-500 uppercase tracking-widest italic">État initial à la récupération</p>
+                            </div>
                         </div>
-                        <div class="space-y-2 text-center">
-                            <div class="rounded-xl overflow-hidden bg-gray-100 shadow-md border border-indigo-200 aspect-[4/3] flex items-center justify-center">
-                                <img src="apres.jpeg" alt="Après" onerror="this.src='https://via.placeholder.com/600x475?text=IMG_5340.jpg+manquant'" class="w-full h-full object-cover">
+                        <div class="space-y-4">
+                            <div class="rounded-2xl overflow-hidden bg-gray-100 shadow-lg border border-indigo-200 aspect-[4/3] md:aspect-[16/10] flex items-center justify-center">
+                                <img src="apres.jpeg" alt="Peugeot 103 après rénovation" onerror="this.src='https://via.placeholder.com/600x500?text=Image+Après+Manquante'" class="w-full h-full object-cover">
                             </div>
-                            <p class="text-sm font-bold text-indigo-600 uppercase tracking-tighter pt-2">Rendu final</p>
+                            <div class="flex items-center gap-3 px-2">
+                                <span class="h-2 w-2 rounded-full bg-indigo-600 animate-pulse"></span>
+                                <p class="text-xs font-bold text-indigo-600 uppercase tracking-widest italic">Rendu final après travaux</p>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <section>
-                    <h4 class="text-lg font-bold text-indigo-600 mb-3 uppercase tracking-wider">Descriptif Technique</h4>
-                    <p class="leading-relaxed">Ce projet a consisté à récupérer le cadre d'un 103vs de 1976 pour le retaper intégralement.</p>
+                <section class="max-w-3xl mx-auto">
+                    <h4 class="text-lg font-bold text-indigo-900 mb-4 flex items-center gap-2 uppercase tracking-wide">
+                        <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        Contexte Technique
+                    </h4>
+                    <p class="leading-relaxed text-lg text-gray-600">Projet de restauration complète d'un modèle Peugeot 103vs de 1976. L'objectif était de concilier fiabilité mécanique et esthétique d'époque tout en apportant des améliorations de sécurité modernes.</p>
                 </section>
 
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-indigo-50 p-6 rounded-2xl border border-indigo-100">
-                        <h5 class="font-bold text-indigo-900 mb-3">Interventions Moteur</h5>
-                        <ul class="list-disc list-inside text-sm space-y-2">
-                            <li>Remontage complet du bloc moteur</li>
-                            <li>Changement d'échappement</li>
-                            <li>Réglage allumage et carburation</li>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-indigo-50 p-8 rounded-3xl border border-indigo-100 shadow-sm">
+                        <h5 class="font-bold text-indigo-950 mb-4 flex items-center gap-3">
+                            <div class="bg-indigo-600 p-2 rounded-lg">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 00-1 1v1a2 2 0 11-4 0v-1a1 1 0 00-1-1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path></svg>
+                            </div>
+                            Ingénierie Moteur
+                        </h5>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start gap-2 italic"><span>•</span> Réfection totale du haut et bas moteur</li>
+                            <li class="flex items-start gap-2 italic"><span>•</span> Montage ligne d'échappement haute performance</li>
+                            <li class="flex items-start gap-2 italic"><span>•</span> Calage précis de l'allumage électronique</li>
                         </ul>
                     </div>
-                    <div class="bg-indigo-50 p-6 rounded-2xl border border-indigo-100">
-                        <h5 class="font-bold text-indigo-900 mb-3">Cycle & Esthétique</h5>
-                        <ul class="list-disc list-inside text-sm space-y-2">
-                            <li>Peinture complète (cadre, fourche)</li>
-                            <li>Montage amortisseurs arrières renforcés</li>
-                            <li>Barre de renfort chromée</li>
+                    <div class="bg-indigo-50 p-8 rounded-3xl border border-indigo-100 shadow-sm">
+                        <h5 class="font-bold text-indigo-950 mb-4 flex items-center gap-3">
+                            <div class="bg-indigo-600 p-2 rounded-lg">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.172-1.172a4 4 0 115.656 5.656l-1.172 1.172"></path></svg>
+                            </div>
+                            Partie Cycle
+                        </h5>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start gap-2 italic"><span>•</span> Traitement anticorrosion et peinture cadre</li>
+                            <li class="flex items-start gap-2 italic"><span>•</span> Installation d'amortisseurs hydrauliques</li>
+                            <li class="flex items-start gap-2 italic"><span>•</span> Intégration d'une barre de renfort structurelle</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="flex justify-center pb-6">
-                    <button onclick="closeModal('projectModal1')" class="text-sm font-bold text-gray-400 hover:text-indigo-600 transition uppercase tracking-widest underline underline-offset-4">Fermer le dossier</button>
+                <div class="flex justify-center pb-10">
+                    <button onclick="closeModal('projectModal1')" class="px-10 py-4 bg-gray-900 text-white rounded-2xl font-bold hover:bg-black transition shadow-xl">Fermer ce dossier</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modales génériques -->
-    <div id="projectModal2" class="modal"><div class="modal-content"><div class="p-8 text-center"><h3 class="text-2xl font-bold mb-4 text-blue-900 uppercase">Dossier Projet n°2</h3><p>Contenu en cours...</p><button onclick="closeModal('projectModal2')" class="mt-6 text-blue-600 font-bold">Fermer</button></div></div></div>
-    <div id="projectModal3" class="modal"><div class="modal-content"><div class="p-8 text-center"><h3 class="text-2xl font-bold mb-4 text-sky-900 uppercase">Dossier Projet n°3</h3><p>Contenu en cours...</p><button onclick="closeModal('projectModal3')" class="mt-6 text-sky-600 font-bold">Fermer</button></div></div></div>
-    <div id="projectModal4" class="modal"><div class="modal-content"><div class="p-8 text-center"><h3 class="text-2xl font-bold mb-4 text-slate-900 uppercase">Dossier Projet n°4</h3><p>Contenu en cours...</p><button onclick="closeModal('projectModal4')" class="mt-6 text-slate-600 font-bold">Fermer</button></div></div></div>
+    <!-- Modales génériques (vides pour l'instant) -->
+    <div id="projectModal2" class="modal"><div class="modal-content"><div class="p-8 text-center"><h3 class="text-2xl font-bold mb-4 text-blue-900 uppercase">Projet n°2</h3><p>Détails techniques à venir...</p><button onclick="closeModal('projectModal2')" class="mt-6 px-6 py-2 bg-blue-600 text-white rounded-xl">Fermer</button></div></div></div>
+    <div id="projectModal3" class="modal"><div class="modal-content"><div class="p-8 text-center"><h3 class="text-2xl font-bold mb-4 text-sky-900 uppercase">Projet n°3</h3><p>Détails techniques à venir...</p><button onclick="closeModal('projectModal3')" class="mt-6 px-6 py-2 bg-sky-600 text-white rounded-xl">Fermer</button></div></div></div>
+    <div id="projectModal4" class="modal"><div class="modal-content"><div class="p-8 text-center"><h3 class="text-2xl font-bold mb-4 text-slate-900 uppercase">Projet n°4</h3><p>Détails techniques à venir...</p><button onclick="closeModal('projectModal4')" class="mt-6 px-6 py-2 bg-slate-600 text-white rounded-xl">Fermer</button></div></div></div>
 
     <!-- Footer -->
     <footer id="contact" class="bg-indigo-950 text-white pt-24 pb-12">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-4xl font-black mb-6 uppercase tracking-tight">Contact</h2>
+            <h2 class="text-4xl font-black mb-6 uppercase tracking-tight">Me Contacter</h2>
             <div class="flex flex-col md:flex-row justify-center gap-6 mb-20">
                 <a href="mailto:paulmrt16@gmail.com" class="px-8 py-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition font-bold">paulmrt16@gmail.com</a>
                 <a href="tel:0788581204" class="px-8 py-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition font-bold">07 88 58 12 04</a>
