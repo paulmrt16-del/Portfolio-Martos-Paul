@@ -40,6 +40,11 @@
             grid-template-columns: 1fr 1fr;
             gap: 1rem;
         }
+        /* Fallback si l'image ne charge pas */
+        img {
+            background-color: #e5e7eb;
+            min-height: 50px;
+        }
         @media (max-width: 640px) {
             .img-comparison { grid-template-columns: 1fr; }
         }
@@ -73,7 +78,7 @@
         </div>
     </section>
 
-    <!-- Architecture / Sommaire Rapide -->
+    <!-- Sommaire Rapide -->
     <section class="py-12 bg-white border-b">
         <div class="max-w-5xl mx-auto px-4">
             <h2 class="text-center text-xs font-bold uppercase tracking-[0.3em] text-indigo-500 mb-10">Structure du Portfolio</h2>
@@ -141,10 +146,10 @@
         <h2 class="text-4xl font-black mb-16 text-center text-gray-900 uppercase">Traces & Réalisations</h2>
         <div class="grid md:grid-cols-2 gap-10">
             <!-- Projet 1 : Peugeot 103 (Bleu Indigo) -->
-            <div class="group bg-indigo-900 rounded-[2.5rem] overflow-hidden shadow-2xl relative border border-white/10">
+            <div class="group bg-indigo-900 rounded-[2.5rem] overflow-hidden shadow-2xl relative border border-white/10 flex flex-col">
                 <div class="p-10 text-white h-full flex flex-col justify-between relative z-10">
                     <div>
-                        <span class="text-indigo-300 font-bold uppercase text-xs tracking-widest">Personel</span>
+                        <span class="text-indigo-300 font-bold uppercase text-xs tracking-widest">Personnel</span>
                         <h3 class="text-3xl font-black mt-4 mb-4 leading-tight">Rénovation : Peugeot 103</h3>
                         <p class="text-indigo-100/70 mb-8 leading-relaxed">Remise à neuf mécanique, cycle et esthétique.</p>
                     </div>
@@ -156,12 +161,12 @@
             </div>
             
             <!-- Projet 2 (Bleu Roi) -->
-            <div class="group bg-blue-900 rounded-[2.5rem] overflow-hidden shadow-2xl relative border border-white/10">
+            <div class="group bg-blue-900 rounded-[2.5rem] overflow-hidden shadow-2xl relative border border-white/10 flex flex-col">
                 <div class="p-10 text-white h-full flex flex-col justify-between relative z-10">
                     <div>
                         <span class="text-blue-300 font-bold uppercase text-xs tracking-widest">Bureau d'études</span>
                         <h3 class="text-3xl font-black mt-4 mb-4 leading-tight">Projet de Rénovation n°2</h3>
-                        <p class="text-blue-100/70 mb-8 leading-relaxed">Description du projet à venir. Détails sur les interventions mécaniques et les solutions techniques apportées.</p>
+                        <p class="text-blue-100/70 mb-8 leading-relaxed">Détails sur les interventions mécaniques et les solutions techniques apportées.</p>
                     </div>
                     <div>
                         <button onclick="openModal('projectModal2')" class="bg-white text-blue-900 px-8 py-3 rounded-xl font-bold hover:scale-105 transition active:scale-95 shadow-lg">Consulter le dossier</button>
@@ -171,12 +176,12 @@
             </div>
 
             <!-- Projet 3 (Bleu Azur / Sky) -->
-            <div class="group bg-sky-900 rounded-[2.5rem] overflow-hidden shadow-2xl relative border border-white/10">
+            <div class="group bg-sky-900 rounded-[2.5rem] overflow-hidden shadow-2xl relative border border-white/10 flex flex-col">
                 <div class="p-10 text-white h-full flex flex-col justify-between relative z-10">
                     <div>
                         <span class="text-sky-300 font-bold uppercase text-xs tracking-widest">Usinage & Fabrication</span>
                         <h3 class="text-3xl font-black mt-4 mb-4 leading-tight">Projet de Rénovation n°3</h3>
-                        <p class="text-sky-100/70 mb-8 leading-relaxed">Description du projet à venir. Détails sur les interventions mécaniques et les solutions techniques apportées.</p>
+                        <p class="text-sky-100/70 mb-8 leading-relaxed">Fabrication de pièces et usinage de précision en atelier.</p>
                     </div>
                     <div>
                         <button onclick="openModal('projectModal3')" class="bg-white text-sky-900 px-8 py-3 rounded-xl font-bold hover:scale-105 transition active:scale-95 shadow-lg">Consulter le dossier</button>
@@ -186,12 +191,12 @@
             </div>
 
             <!-- Projet 4 (Bleu Slate / Ardoise) -->
-            <div class="group bg-slate-900 rounded-[2.5rem] overflow-hidden shadow-2xl relative border border-white/10">
+            <div class="group bg-slate-900 rounded-[2.5rem] overflow-hidden shadow-2xl relative border border-white/10 flex flex-col">
                 <div class="p-10 text-white h-full flex flex-col justify-between relative z-10">
                     <div>
                         <span class="text-slate-300 font-bold uppercase text-xs tracking-widest">Organisation Industrielle</span>
                         <h3 class="text-3xl font-black mt-4 mb-4 leading-tight">Projet de Rénovation n°4</h3>
-                        <p class="text-slate-100/70 mb-8 leading-relaxed">Description du projet à venir. Détails sur les interventions mécaniques et les solutions techniques apportées.</p>
+                        <p class="text-slate-100/70 mb-8 leading-relaxed">Gestion de maintenance et organisation de la production.</p>
                     </div>
                     <div>
                         <button onclick="openModal('projectModal4')" class="bg-white text-slate-900 px-8 py-3 rounded-xl font-bold hover:scale-105 transition active:scale-95 shadow-lg">Consulter le dossier</button>
@@ -216,17 +221,17 @@
                 <section>
                     <h4 class="text-lg font-bold text-indigo-600 mb-6 uppercase tracking-wider text-center">Transformation (Avant / Après)</h4>
                     <div class="img-comparison">
-                        <div class="space-y-2">
-                            <div class="rounded-xl overflow-hidden bg-gray-100 shadow-md border border-gray-200">
-                                <img src="IMG_2762.jpg" alt="Peugeot 103 avant rénovation" class="w-full h-auto object-cover">
+                        <div class="space-y-2 text-center">
+                            <div class="rounded-xl overflow-hidden bg-gray-100 shadow-md border border-gray-200 aspect-video flex items-center justify-center">
+                                <img src="IMG_2762.jpg" alt="Avant" onerror="this.src='https://via.placeholder.com/400x300?text=IMG_2762.jpg+manquant'" class="w-full h-full object-cover">
                             </div>
-                            <p class="text-center text-sm font-bold text-gray-400 uppercase tracking-tighter">État initial</p>
+                            <p class="text-sm font-bold text-gray-400 uppercase tracking-tighter pt-2">État initial</p>
                         </div>
-                        <div class="space-y-2">
-                            <div class="rounded-xl overflow-hidden bg-gray-100 shadow-md border border-indigo-200">
-                                <img src="IMG_5340.jpg" alt="Peugeot 103 après rénovation" class="w-full h-auto object-cover">
+                        <div class="space-y-2 text-center">
+                            <div class="rounded-xl overflow-hidden bg-gray-100 shadow-md border border-indigo-200 aspect-video flex items-center justify-center">
+                                <img src="IMG_5340.jpg" alt="Après" onerror="this.src='https://via.placeholder.com/400x300?text=IMG_5340.jpg+manquant'" class="w-full h-full object-cover">
                             </div>
-                            <p class="text-center text-sm font-bold text-indigo-600 uppercase tracking-tighter">Rendu final</p>
+                            <p class="text-sm font-bold text-indigo-600 uppercase tracking-tighter pt-2">Rendu final</p>
                         </div>
                     </div>
                 </section>
@@ -269,7 +274,7 @@
         </div>
     </div>
 
-    <!-- Modales génériques pour les nouveaux projets -->
+    <!-- Modales génériques -->
     <div id="projectModal2" class="modal"><div class="modal-content"><div class="p-8 text-center"><h3 class="text-2xl font-bold mb-4 text-blue-900 uppercase">Dossier Projet n°2</h3><p>Contenu technique en cours de préparation...</p><button onclick="closeModal('projectModal2')" class="mt-6 text-blue-600 font-bold">Fermer</button></div></div></div>
     <div id="projectModal3" class="modal"><div class="modal-content"><div class="p-8 text-center"><h3 class="text-2xl font-bold mb-4 text-sky-900 uppercase">Dossier Projet n°3</h3><p>Contenu technique en cours de préparation...</p><button onclick="closeModal('projectModal3')" class="mt-6 text-sky-600 font-bold">Fermer</button></div></div></div>
     <div id="projectModal4" class="modal"><div class="modal-content"><div class="p-8 text-center"><h3 class="text-2xl font-bold mb-4 text-slate-900 uppercase">Dossier Projet n°4</h3><p>Contenu technique en cours de préparation...</p><button onclick="closeModal('projectModal4')" class="mt-6 text-slate-600 font-bold">Fermer</button></div></div></div>
