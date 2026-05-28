@@ -465,50 +465,34 @@
             <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">Bureau d'études CAO</span>
             <h3 class="text-2xl md:text-3xl font-extrabold mt-1 mb-6 text-white tech-font">Réducteur de Vitesse Coaxial</h3>
             
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div class="bg-slate-950/50 p-6 rounded-2xl border border-indigo-950/80 flex flex-col items-center">
-                    <div class="scene my-4 w-full h-[250px] flex items-center justify-center">
-                        <div class="cube" id="cube-cad">
-                            <div class="face front">Pignon</div>
-                            <div class="face back">Arbre E.</div>
-                            <div class="face right">Roue D.</div>
-                            <div class="face left">Arbre S.</div>
-                            <div class="face top">Carter Sup</div>
-                            <div class="face bottom">Carter Inf</div>
-                        </div>
-                    </div>
-                    <div class="flex gap-3 mt-4">
-                        <button onclick="toggleExplode()" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-xs font-bold uppercase rounded-lg transition-all">
-                            Exploser/Assembler
-                        </button>
-                        <button onclick="rotateModel()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-indigo-950/60 text-xs font-bold uppercase rounded-lg transition-all">
-                            Rotation
-                        </button>
-                    </div>
+            <div class="grid grid-cols-2 gap-3">
+                <!-- Image 1 -->
+                <div class="aspect-video bg-slate-800 rounded-xl overflow-hidden border border-indigo-900/50">
+                    <img src="IMG_5399 (1).JPG" alt="Détail CAO 1" class="w-full h-full object-cover">
                 </div>
-                <div class="space-y-4">
-                    <h4 class="text-sm font-bold uppercase tracking-wider text-blue-400">Conception 3D & Dimensionnement</h4>
-                    <p class="text-sm text-slate-300">
-                        Étude cinématique, calculs de dentures hélicoïdales et dimensionnement des arbres guidés en rotation par roulements à billes.
-                    </p>
+                <!-- Image 2 -->
+                <div class="aspect-video bg-slate-800 rounded-xl overflow-hidden border border-indigo-900/50">
+                    <img src="IMG_5402 (1).JPG" alt="Détail CAO 2" class="w-full h-full object-cover">
+                </div>
+                <!-- Vidéo 1 -->
+                <div class="aspect-video bg-slate-800 rounded-xl overflow-hidden border border-indigo-900/50">
+                    <video controls class="w-full h-full object-cover">
+                        <source src="IMG_5736.mov" type="video/quicktime">
+                        Votre navigateur ne supporte pas la vidéo.
+                    </video>
+                </div>
+                <!-- Vidéo 2 -->
+                <div class="aspect-video bg-slate-800 rounded-xl overflow-hidden border border-indigo-900/50">
+                    <video controls class="w-full h-full object-cover">
+                        <source src="IMG_5789 (1).mov" type="video/quicktime">
+                        Votre navigateur ne supporte pas la vidéo.
+                    </video>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <!-- Modale Projet 4 : Optimisation de poste de travail -->
-    <div id="projectModal4" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 hidden items-center justify-center p-4">
-        <div class="bg-slate-900 border border-indigo-900/60 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-8 relative">
-            <button onclick="closeModal('projectModal4')" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl p-2 rounded-lg bg-slate-950/40 border border-indigo-950/40 hover:border-indigo-800 transition">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            
-            <span class="text-xs font-bold text-purple-400 uppercase tracking-widest">Organisation Industrielle</span>
-            <h3 class="text-2xl md:text-3xl font-extrabold mt-1 mb-6 text-white tech-font">Optimisation de Poste 5S</h3>
-            
-            <div class="space-y-4 text-sm text-slate-300">
-                <p>
-                    Étude complète d'ergonomie, réduction des flux de déplacements superflus (Muda) et mise en place de standards de rangement visuels pérennes selon les méthodes Lean.
+            <div class="mt-6 space-y-4">
+                <h4 class="text-sm font-bold uppercase tracking-wider text-blue-400">Conception 3D & Dimensionnement</h4>
+                <p class="text-sm text-slate-300">
+                    Étude cinématique, calculs de dentures hélicoïdales et dimensionnement des arbres guidés en rotation par roulements à billes.
                 </p>
             </div>
         </div>
