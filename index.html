@@ -269,8 +269,6 @@
                 <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest bg-indigo-950/60 border border-indigo-900 px-3 py-1 rounded-full">2025 - Présent</span>
                 <h3 class="text-xl font-bold mt-3 text-white">BUT Génie Mécanique et Productique (GMP)</h3>
                 <p class="text-md text-slate-300 font-medium italic mb-2">MFJA Montaudran - Université de Toulouse Paul Sabatier</p>
-                <p class="text-sm text-slate-400 leading-relaxed max-w-2xl">
-                   
             </div>
             
             <!-- Baccalauréat -->
@@ -280,8 +278,6 @@
                 <span class="text-xs font-bold text-slate-400 uppercase tracking-widest bg-slate-900 border border-slate-800 px-3 py-1 rounded-full">2022 - 2025</span>
                 <h3 class="text-xl font-bold mt-3 text-white">Baccalauréat Technologique STI2D</h3>
                 <p class="text-md text-slate-300 font-medium italic mb-2">Lycée Saint-Cricq - Pau</p>
-                <p class="text-sm text-slate-400 leading-relaxed max-w-2xl">
-                    
             </div>
         </div>
     </section>
@@ -440,21 +436,15 @@
                     </h4>
                     
                     <div class="comparison-slider h-[280px] rounded-2xl border border-indigo-950/60 bg-slate-950 relative" id="slider-root">
-                        <!-- Image Après (Fond) -->
+                        <!-- apres.jpeg -->
                         <div class="comparison-img flex items-center justify-center absolute inset-0 w-full h-full bg-slate-900">
-                            <div class="text-center text-xs font-mono text-indigo-400">
-                                <i class="fa-solid fa-motorcycle text-4xl mb-2"></i>
-                                <p>MOTEUR RESTAURÉ & NETTOYÉ</p>
-                            </div>
+                            <img src="images/apres.jpeg" alt="Moteur restauré" class="w-full h-full object-cover">
                         </div>
                         
-                        <!-- Image Avant (Superposée, Redimensionnable) -->
+                        <!-- avant.PNG -->
                         <div class="resize-img absolute inset-0 h-full overflow-hidden z-20" style="width: 50%;">
                             <div class="absolute inset-0 bg-slate-950 flex items-center justify-center" id="before-img-el" style="width: 100%;">
-                                <div class="text-center text-xs font-mono text-amber-600">
-                                    <i class="fa-solid fa-screwdriver-wrench text-4xl mb-2"></i>
-                                    <p>MOTEUR EN SORTIE DE GRANGE</p>
-                                </div>
+                                <img src="images/avant.png" alt="Moteur avant" class="w-full h-full object-cover">
                             </div>
                         </div>
                         
@@ -538,11 +528,7 @@
     <!-- Footer / Contact -->
     <footer id="contact" class="bg-slate-950 text-white pt-24 pb-12 border-t border-indigo-950/80 relative">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest"></span>
             <h2 class="text-3xl md:text-5xl font-black mb-6 uppercase tracking-tight text-white tech-font mt-2">Me Contacter</h2>
-            <p class="text-sm text-slate-400 max-w-md mx-auto mb-12">
-               
-
             <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16 max-w-xl mx-auto">
                 <button onclick="copyToClipboard('paulmrt16@gmail.com', 'email')" class="group flex items-center justify-between gap-4 px-6 py-4 bg-slate-900 border border-indigo-950 hover:border-indigo-700 rounded-2xl hover:bg-slate-800 transition text-left w-full sm:w-auto">
                     <div>
@@ -664,8 +650,6 @@
                 }, 2500);
             }
         }
-
-    
 
         // Initialisation de la comparaison d'images glissante (Avant/Après)
         function initComparisonSlider() {
