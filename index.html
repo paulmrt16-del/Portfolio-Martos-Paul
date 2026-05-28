@@ -435,24 +435,14 @@
                         <i class="fa-solid fa-arrows-left-right text-indigo-400"></i> Comparaison Avant / Après
                     </h4>
                     
-                    <div class="comparison-slider h-[280px] rounded-2xl border border-indigo-950/60 bg-slate-950 relative" id="slider-root">
-                        <!-- apres.jpeg -->
-                        <div class="comparison-img flex items-center justify-center absolute inset-0 w-full h-full bg-slate-900">
-                            <img src="apres.jpeg" alt="Moteur restauré" class="w-full h-full object-cover">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="rounded-xl overflow-hidden border border-indigo-900/50">
+                            <img src="avant.PNG" alt="Moteur avant" class="w-full aspect-video object-cover">
+                            <p class="text-[10px] text-center bg-slate-950 p-1 text-slate-400 uppercase">Avant</p>
                         </div>
-                        
-                        <!-- avant.PNG -->
-                        <div class="resize-img absolute inset-0 h-full overflow-hidden z-20" style="width: 50%;">
-                            <div class="absolute inset-0 bg-slate-950 flex items-center justify-center" id="before-img-el" style="width: 100%;">
-                                <img src="avant.PNG" alt="Moteur avant" class="w-full h-full object-cover">
-                            </div>
-                        </div>
-                        
-                        <!-- Glissière -->
-                        <div class="slider-handle absolute top-0 bottom-0 w-1 bg-indigo-500 cursor-ew-resize z-30" style="left: 50%;">
-                            <div class="slider-button absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white pointer-events-none shadow-lg">
-                                <i class="fa-solid fa-arrows-left-right text-xs"></i>
-                            </div>
+                        <div class="rounded-xl overflow-hidden border border-indigo-900/50">
+                            <img src="apres.jpeg" alt="Moteur après" class="w-full aspect-video object-cover">
+                            <p class="text-[10px] text-center bg-slate-950 p-1 text-slate-400 uppercase">Après</p>
                         </div>
                     </div>
                 </div>
